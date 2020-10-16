@@ -1,9 +1,9 @@
 #include<stdio.h>
 struct student
 {
-     int roll;
-     char name[20];
-     int marks[5];
+     int rollno;
+     char sname[20];
+     int mark[5];
      int total;
      float percent;
 }
@@ -20,16 +20,16 @@ int main()
      	printf("\n");
         printf("Enter Details of Student %d ",i+1);
         printf("\nEnter Roll-No. : ");
-        scanf("%d",&stud[i].roll);
+        scanf("%d",&stud[i].rollno);
         printf("Enter Name : ");
-        scanf("%s",stud[i].name);
+        scanf("%s",stud[i].sname);
           
         for(j=0;j<5;j++)
         {
             printf("Enter Marks of Subject %d : \n",j+1);
-            scanf("%d",&stud[i].marks[j]);
-            stud[i].total=stud[i].total+stud[i].marks[j] ;
-        	stud[i].percent=(float)((float)stud[i].marks[0]/(float)stud[i].total)*100;    
+            scanf("%d",&stud[i].mark[j]);
+            stud[i].total=stud[i].total+stud[i].mark[j] ;
+        	stud[i].percent=(float)((float)stud[i].mark[0]/(float)stud[i].total)*100;    
         }
           
     }
@@ -51,7 +51,7 @@ int main()
     printf("\n ROLLNO     NAME  MATHS  \n");
     for(i=0;i<n;i++)
     {
-    printf("\n  %d\t   %s\t   %.2f\t  ", stud[i].roll, stud[i].name, stud[i].percent);
+    printf("\n  %d\t   %s\t   %.2f\t  ", stud[i].rollno, stud[i].sname, stud[i].percent);
     }
     return 0;
 }
