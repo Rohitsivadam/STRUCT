@@ -1,57 +1,57 @@
 #include<stdio.h>
 struct student
 {
-     int roll;
-     char name[20];
-     int marks[5];
+     int Roll;
+     char Name[20];
+     int Marks[10];
      int total;
      float percent;
 }
 stud[60];
 int main()
 {
-    int i,j,n;
+    int c,d,n;
     struct student s;
     printf("Enter the number of Students : ");
     scanf("%d",&n);
     printf("Subject 1 = Maths \nSubject 2 = English\nSubject 3 = Hindi\nSubject 4 = Physics\nSubject 1 = Chemistry\n");
-    for(i=0;i<n;i++)
+    for(c=0;c<n;c++)
     {
      	printf("\n");
         printf("Enter Details of Student %d ",i+1);
         printf("\nEnter Roll-No. : ");
-        scanf("%d",&stud[i].roll);
+        scanf("%d",&stud[c].Roll);
         printf("Enter Name : ");
-        scanf("%s",stud[i].name);
+        scanf("%s",stud[c].Name);
           
-        for(j=0;j<5;j++)
+        for(d=0;d<5;d++)
         {
-            printf("Enter Marks of Subject %d : \n",j+1);
-            scanf("%d",&stud[i].marks[j]);
-            stud[i].total=stud[i].total+stud[i].marks[j] ;
-        	stud[i].percent=(float)((float)stud[i].marks[0]/(float)stud[i].total)*100;    
+            printf("Enter Marks of Subject %d : \n",d+1);
+            scanf("%d",&stud[c].Marks[d]);
+            stud[c].total=stud[c].total+stud[c].Marks[d] ;
+        	stud[i].percent=(float)((float)stud[c].Marks[0]/(float)stud[c].total)*100;    
         }
           
     }
-    for(i=0;i<n;i++)
+    for(c=0;c<n;c++)
     {
-        for(j=i+1;j<5;j++)
+        for(d=i+1;d<5;d++)
         {
         	
-            if (stud[i].percent > stud[j].percent)
+            if (stud[c].percent > stud[d].percent)
             {
-                s=stud[i];
-                stud[i]=stud[j];
-                stud[j]=s;
+                s=stud[c];
+                stud[c]=stud[d];
+                stud[d]=s;
             }
         }
     }
     printf("Sorted Marks (According to Maths Mark)");
     printf("\n-----------------------------------\n");
     printf("\n ROLLNO     NAME  MATHS  \n");
-    for(i=0;i<n;i++)
+    for(c=0;c<n;c++)
     {
-    printf("\n  %d\t   %s\t   %.2f\t  ", stud[i].roll, stud[i].name, stud[i].percent);
+    printf("\n  %d\t   %s\t   %.2f\t  ", stud[c].Roll, stud[c].Name, stud[d].percent);
     }
     return 0;
 }
