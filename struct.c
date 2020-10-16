@@ -1,8 +1,8 @@
 #include<stdio.h>
 struct studentlist
 {
-     int roll;
-     char name[20];
+     int rollno;
+     char sname[20];
      int marks[10];
      int total;
      float percent;
@@ -20,9 +20,9 @@ int main()
      	printf("\n");
         printf("Enter Details of Student %d ",i+1);
         printf("\nEnter Roll-No: ");
-        scanf("%d",&stud[a].roll);
+        scanf("%d",&stud[a].rollno);
         printf("Enter Name: ");
-        scanf("%s",stud[a].name);
+        scanf("%s",stud[a].sname);
           
         for(b=0;b<5;b++)
         {
@@ -51,7 +51,7 @@ int main()
     printf("\n ROLLNO     NAME  MATHS  \n");
     for(a=0;a<n;a++)
     {
-    printf("\n  %d\t   %s\t   %.2f\t  ", stud[a].roll, stud[a].name, stud[a].percent);
+    printf("\n  %d\t   %s\t   %.2f\t  ", stud[a].rollno, stud[a].sname, stud[a].percent);
     }
     return 0;
 }
