@@ -46,9 +46,9 @@ int main()
             }
         }
     }
-    printf("Sorted Marks (According to Maths Mark)");
+    printf("SORTED MARKS : (According to Maths Mark)");
     printf("\n-----------------------------------\n");
-    printf("\n ROLLNO     NAME  MATHS  \n");
+    printf("\n ROLLNO     NAME OF STUDENT  MATHS  \n");
     for(i=0;i<n;i++)
     {
     printf("\n  %d\t   %s\t   %.2f\t  ", stud[i].roll, stud[i].name, stud[i].percent);
