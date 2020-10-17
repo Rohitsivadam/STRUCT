@@ -18,7 +18,7 @@ int main()
     for(i=0;i<n;i++)
     {
      	printf("\n");
-        printf("Enter Details of Student %d ",i+1);
+        printf("Enter the Details of Student %d ",i+1);
         printf("\nEnter Roll-No. : ");
         scanf("%d",&stud[i].roll);
         printf("Enter Name : ");
@@ -46,9 +46,9 @@ int main()
             }
         }
     }
-    printf("Sorted Marks (According to Maths Mark)");
+    printf("SORTED MARKS : (According to Maths Mark)");
     printf("\n-----------------------------------\n");
-    printf("\n ROLLNO     NAME  MATHS  \n");
+    printf("\n ROLLNO     NAME OF STUDENT  MATHS  \n");
     for(i=0;i<n;i++)
     {
     printf("\n  %d\t   %s\t   %.2f\t  ", stud[i].roll, stud[i].name, stud[i].percent);
