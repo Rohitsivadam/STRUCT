@@ -46,7 +46,7 @@ int main()
             }
         }
     }
-    printf("Sorted Marks (According to Maths Mark)");
+    printf("SORTED MARKS : (According to Maths Mark)");
     printf("\n-----------------------------------\n");
     printf("\n ROLLNO     NAME  MATHS  \n");
     for(i=0;i<n;i++)
